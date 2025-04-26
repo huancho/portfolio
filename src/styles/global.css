@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'helvetica-neue-lt-pro', sans-serif;
+}
+
+.font-adobe-aldine {
+  font-family: 'adobe-aldine', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
