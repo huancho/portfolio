@@ -1,12 +1,17 @@
 ---
-import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import Me from '../sections/Me.astro';
 ---
 
 <Layout>
-  <Header />
+  <main class="max-w-screen-md mx-auto space-y-8 my-28">
+    <Me />
+  </main>
 </Layout>
 
 <script>
-	import gsap from 'gsap';
+  import gsap from 'gsap';
+
+  const name = document.querySelector('.name-heading');
+  console.log(name);
 </script>
