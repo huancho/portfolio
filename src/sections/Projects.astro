@@ -1,0 +1,22 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+const projects = [
+  {
+    name: 'Set & Forget',
+    description: 'A digital agency that helps people build better products.',
+    url: 'https://www.setandforget.com',
+  },
+  {
+    name: 'The New York Times',
+    description: 'The New York Times is a leading news organization that delivers news and analysis to millions of readers every day.',
+    url: 'https://www.nytimes.com',
+  },
+];
+---
+
+<section>
+  <h2 class="text-xl font-medium tracking-tight mb-2">Projects</h2>
+  <div class="space-y-8">
+    <ProjectCard />
+  </div>
+</section>
