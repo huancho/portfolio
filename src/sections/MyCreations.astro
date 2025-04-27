@@ -1,0 +1,19 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+
+const projects = [
+  {
+    name: 'Lienzo Marketplace',
+    description:
+      'Currently developing a marketplace platform to connect emerging artists with art buyers, promoting art accessibility and visibility.',
+    url: '',
+  },
+];
+---
+
+<section>
+  <h2 class="text-xl font-medium tracking-tight mb-8">My Creations</h2>
+  <div class="space-y-8">
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</section>
