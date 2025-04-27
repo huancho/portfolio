@@ -1,6 +1,44 @@
 <footer class="border-t border-gray-200">
-  <div class="max-w-screen-md mx-auto flex items-center justify-between py-2">
-    <p>© 2022 Juan Speroni</p>
-    <p class="text-gray-600">2025</p>
+  <div
+    class="max-w-screen-md mx-auto flex items-center justify-between py-2 text-gray-600 text-sm"
+  >
+    <p id="footer-text"></p>
+    <p id="footer-time"></p>
   </div>
 </footer>
+
+<script>
+  // Footer text
+  const phrases = [
+    'Buenos Aires, Argentina',
+    'The land of mate & asado',
+    'From the city that never sleeps',
+    'Home of Messi, Maradona and dulce de leche',
+    'A sip of mate, a breath of Buenos Aires',
+    'Crafted under southern skies',
+  ];
+
+  const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+  const footerText = document.getElementById('footer-text') as HTMLElement;
+  footerText.textContent = randomPhrase;
+
+  // Footer time
+  function updateBuenosAiresTime() {
+    const now = new Date();
+    const options: Intl.DateTimeFormatOptions = {
+      hour: '2-digit',
+      minute: '2-digit',
+      timeZone: 'America/Argentina/Buenos_Aires',
+      timeZoneName: 'short',
+    };
+
+    const formatter = new Intl.DateTimeFormat(navigator.language, options);
+    const baTime = formatter.format(now);
+    const footerTime = document.getElementById('footer-time') as HTMLElement;
+    footerTime.textContent = baTime;
+  }
+
+  // 3. run once, then every minute
+  updateBuenosAiresTime();
+  setInterval(updateBuenosAiresTime, 1000);
+</script>
