@@ -2,21 +2,35 @@
 import ProjectCard from '../components/ProjectCard.astro';
 const projects = [
   {
-    name: 'Set & Forget',
-    description: 'A digital agency that helps people build better products.',
-    url: 'https://www.setandforget.com',
+    name: 'Xnapper',
+    description:
+      'Converted a web application into a cross-platform Electron desktop app, optimizing offline access and native OS integration.',
+    url: 'https://xnapper.com/app',
   },
   {
-    name: 'The New York Times',
-    description: 'The New York Times is a leading news organization that delivers news and analysis to millions of readers every day.',
-    url: 'https://www.nytimes.com',
+    name: 'Beyond Agency',
+    description:
+      'Developed an animated landing page for a luxury travel agency, emphasizing visual storytelling and engagement.',
+    url: 'https://beyond-agency.vercel.app/',
+  },
+  {
+    name: 'Solar Panel Tracker App',
+    description:
+      'Built an intuitive image uploader application to help solar technicians track panel installation progress efficiently.',
+    url: '',
+  },
+  {
+    name: 'Next.js Web Applications',
+    description:
+      'Created robust web apps using Next.js and TypeScript, featuring secure authentication and management solutions for snowmobile clubs, logistics companies, and meal-tracking NGOs.',
+    url: '',
   },
 ];
 ---
 
 <section>
-  <h2 class="text-xl font-medium tracking-tight mb-2">Projects</h2>
+  <h2 class="text-xl font-medium tracking-tight mb-8">Projects</h2>
   <div class="space-y-8">
-    <ProjectCard />
+    {projects.map((project) => <ProjectCard project={project} />)}
   </div>
 </section>
