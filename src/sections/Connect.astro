@@ -1,17 +1,20 @@
 ---
 import Heading from '../components/Heading.astro';
+import Link from '../layouts/Link.astro';
 ---
 
 <section>
   <Heading id="connect-heading" title="Connect" />
   <p class="text-lg">
-    Feel free to connect at <a
-      href="https://www.linkedin.com/in/juan-marcos-speroni/"
-      class="underline"
-      target="_blank">@juansperoni</a
-    > or reach out to me at <a
-      href="mailto:jsperoni@itba.edu.ar?subject=Let's%20Build%20Something%20Together&body=Hello%20Juan%2C%0A%0A"
-      class="underline">jsperoni@itba.edu.ar</a
-    >
+    Feel free to connect at
+    <Link
+      text="@juansperoni"
+      url="https://www.linkedin.com/in/juan-marcos-speroni/"
+    />
+    or reach out to me at
+    <Link
+      text="jsperoni@itba.edu.ar"
+      url="mailto:jsperoni@itba.edu.ar?subject=Let's%20Build%20Something%20Together&body=Hello%20Juan%2C%0A%0A"
+    />
   </p>
 </section>
