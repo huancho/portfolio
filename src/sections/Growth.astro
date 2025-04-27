@@ -1,0 +1,17 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    name: 'Three.js Journey',
+    description:
+      'Passionate learner, currently exploring WebGL and shaders development through interactive courses by Bruno Simon.',
+    url: 'https://threejs-journey.com/#',
+  },
+];
+---
+
+<section>
+  <h2 class="text-xl font-medium tracking-tight mb-8">Growth</h2>
+  {projects.map((project) => <ProjectCard project={project} />)}
+</section>
