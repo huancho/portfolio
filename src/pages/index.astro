@@ -6,10 +6,14 @@ import Projects from '../sections/Projects.astro';
 import Growth from '../sections/Growth.astro';
 import Connect from '../sections/Connect.astro';
 import Footer from '../sections/Footer.astro';
+import ThemeButton from '../components/ThemeButton.astro';
 ---
 
 <Layout>
-  <main class="max-w-screen-md mx-auto space-y-12 py-28 px-6 text-balance md:px-0 sm:text-pretty">
+  <ThemeButton />
+  <main
+    class="max-w-screen-md mx-auto space-y-12 py-28 px-6 text-balance md:px-0 sm:text-pretty"
+  >
     <Me />
     <Projects />
     <MyCreations />

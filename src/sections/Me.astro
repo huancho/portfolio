@@ -1,5 +1,5 @@
 ---
-import Link from '../layouts/Link.astro';
+import Link from '../components/Link.astro';
 ---
 
 <div>
@@ -13,7 +13,7 @@ import Link from '../layouts/Link.astro';
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          class="fill-gray-300 transition-colors duration-200 hover:fill-current"
+          class="icon-hover fill-current"
           viewBox="0 0 16 16"
         >
           <path
@@ -21,12 +21,15 @@ import Link from '../layouts/Link.astro';
           ></path>
         </svg>
       </a>
-      <a href="https://www.linkedin.com/in/juan-marcos-speroni/" target="_blank">
+      <a
+        href="https://www.linkedin.com/in/juan-marcos-speroni/"
+        target="_blank"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          class="fill-gray-300 transition-colors duration-200 hover:fill-current"
+          class="icon-hover fill-current"
           viewBox="0 0 16 16"
         >
           <path
@@ -46,3 +49,14 @@ import Link from '../layouts/Link.astro';
     />.
   </p>
 </div>
+
+<style>
+  .icon-hover {
+    fill: currentColor;
+    fill-opacity: 0.5;
+    transition: fill-opacity 200ms ease-in-out;
+  }
+  .icon-hover:hover {
+    fill-opacity: 1;
+  }
+</style>

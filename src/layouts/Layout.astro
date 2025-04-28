@@ -8,10 +8,20 @@ import './src/styles/global.css';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="https://use.typekit.net/sjo0ejo.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sjo0ejo.css" />
     <title>Juan Speroni</title>
+    <script is:inline>
+      (() => {
+        const ls = localStorage.getItem('theme');
+        const system = matchMedia('(prefers-color-scheme: dark)').matches;
+        const dark = ls === 'dark' || (!ls && system);
+        document.documentElement.classList.toggle('dark', dark);
+      })();
+    </script>
   </head>
-  <body>
+  <body
+    class="bg-[#FAF9F6] text-[#242424] dark:bg-[#1C1C1C] dark:text-[#F2F0E8]"
+  >
     <slot />
   </body>
 </html>

@@ -1,6 +1,6 @@
-<footer class="border-t border-gray-200">
+<footer class="border-t border-current/50">
   <div
-    class="max-w-screen-md mx-auto flex items-center justify-between py-2 text-gray-600 text-sm"
+    class="max-w-screen-md mx-auto flex items-center justify-between py-2 text-current/80 text-sm px-6 md:px-0"
   >
     <p id="footer-text"></p>
     <p id="footer-time"></p>
@@ -38,7 +38,6 @@
     footerTime.textContent = baTime;
   }
 
-  // 3. run once, then every minute
   updateBuenosAiresTime();
   setInterval(updateBuenosAiresTime, 1000);
 </script>
