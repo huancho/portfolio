@@ -26,6 +26,13 @@ import ThemeButton from '../components/ThemeButton.astro';
 <script>
   import gsap from 'gsap';
 
-  const name = document.querySelector('.name-heading');
-  console.log(name);
+  const blocks = document.querySelectorAll('.animated-block');
+
+  gsap.to(blocks, {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    ease: 'power1.out',
+    stagger: 0.15,
+  });
 </script>
